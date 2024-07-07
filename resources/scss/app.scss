@@ -1,5 +1,469 @@
 @import "~bootstrap/scss/bootstrap";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: red;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    background-color: #FF6900;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+footer {
+    background-color: #1A1A1A;
+    width: 100%;
+    z-index: 3
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/*button class*/
+
+.line-height {
+    line-height: 1.9;
+}
+
+/* layout class*/
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.unstyled-list {
+    list-style-type: none;
+}
+
+.unstyled-list li {
+    display: inline-block;
+}
+
+.unstyled-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+.li-footer {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+li {
+    font-size: 14px;
+    padding: 5px 0px;
+}
+
+.height-xl {
+    height: 500px;
+}
+
+.height-l {
+    height: 300px;
+}
+
+.height-m {
+    height: 100px;
+}
+
+.height-sm {
+    height: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/*container contents*/
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.container-sm {
+    max-width: 990px;
+    margin: 30px auto;
+}
+
+
+.content {
+    position: relative;
+}
+
+/*image hover*/
+
+img {
+    width: 100%;
+}
+
+.hide {
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+.content:hover .hide {
+    display: block;
+    z-index: 2;
+}
+
+
+
+/*heart hover*/
+.heart-label {
+    position: absolute;
+    font-size: 30px;
+    top: 10px;
+    right: 0;
+    padding: 10px 20px;
+    z-index: 2;
+}
+
+.red-heart-label {
+    position: absolute;
+    color: red;
+    font-size: 30px;
+    top: 10px;
+    right: 0;
+    padding: 10px 20px;
+    opacity: 0;
+    z-index: 3;
+}
+
+.bg-white:hover.red-heart-label {
+    opacity: 4;
+}
+
+
+.discount-label {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    padding: 5px 10px;
+}
+
+.sustainability-label {
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    padding: 5px 10px;
+}
+
+.left {
+    left: 0px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.space-around {
+    align-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-end {
+    justify-content: end;
+}
+
+.a-content-center {
+    align-content: center;
+}
+
+
+.col-17 {
+    width: calc(100% / 6);
+}
+
+.col-20 {
+    width: 20%;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+.col-30 {
+    width: calc(30% - 1px);
+}
+
+.col-33 {
+    margin: 10px;
+    width: calc(100% / 3 - 20px);
+    /*da riguardare*/
+}
+
+.col-34 {
+    width: calc(100% / 6 * 2);
+}
+
+.col-40 {
+    width: 40%;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.col-70 {
+    width: calc(70% - 1px);
+}
+
+.col-80 {
+    width: 80%;
+}
+
+.col-100 {
+    width: 100%;
+}
+
+/* utility class */
+
+/*background-color class*/
+.bg-orange {
+    background-color: #DAA520;
+}
+
+.bg-red {
+    background-color: #FF0000;
+}
+
+.bg-blue {
+    background-color: #00008B;
+}
+
+.bg-light-grey {
+    background-color: #E5E5E5;
+}
+
+.bg-grey {
+    background-color: #D3D3D3;
+}
+
+.bg-green {
+    background-color: #228B22;
+}
+
+.bg-dark-grey {
+    background-color: #23272A;
+}
+
+.bg-light-green {
+    background-color: #20B2AA;
+}
+
+.bg-anthracite {
+    background-color: #1A1A1A;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+
+
+
+/*padding-class*/
+.px-5 {
+    padding: 0px 5px;
+}
+
+.px-10 {
+    padding: 0px 10px;
+}
+
+.px-20 {
+    padding: 0px 20px;
+}
+
+.px-40 {
+    padding: 0px 40px;
+}
+
+.px-60 {
+    padding: 0px 60px;
+}
+
+.px-140 {
+    padding: 0px 140px;
+}
+
+.py-5 {
+    padding: 5px 0px;
+}
+
+.py-10 {
+    padding: 10px 0px;
+}
+
+.py-20 {
+    padding: 20px 0px;
+}
+
+.py-30 {
+    padding: 30px 0px;
+}
+
+.py-40 {
+    padding: 40px 0px;
+}
+
+.py-60 {
+    padding: 60px 0px;
+}
+
+.py-80 {
+    padding: 80px 0px;
+}
+
+.py-120 {
+    padding: 120px 0px;
+}
+
+/*combined class*/
+.pxy-10 {
+    padding: 10px 10px;
+}
+
+.pxy-20 {
+    padding: 20px 20px;
+}
+
+.pxy-20-160 {
+    padding: 20px 163px;
+}
+
+.pxy-10-20 {
+    padding: 10px 20px;
+}
+
+
+/*margin*/
+.my-5 {
+    margin: 5px 0;
+}
+
+.my-10 {
+    margin: 10px 0;
+}
+
+.my-20 {
+    margin: 20px 0;
+}
+
+.my-30 {
+    margin: 30px 0;
+}
+
+/*text*/
+
+.brand {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.dress-name {
+    text-transform: uppercase;
+}
+
+.h2-footer {
+    font-size: 16px;
+}
+
+.f-s-14 {
+    font-size: 14px;
+}
+
+.f-w-300 {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.f-w-500 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.strike-through {
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: line-through;
+    padding-left: 5px;
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    color: red;
+}
+
+
+/*z-index*/
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.z-index-3 {
+    z-index: 3;
+}
+
+.z-index-4 {
+    z-index: 4;
+}
+
+.z-index-5 {
+    z-index: 5;
+}
+
+/*icon*/
+.icon {
+    width: 20px;
+    height: auto;
+    margin: 0 5px;
 }
